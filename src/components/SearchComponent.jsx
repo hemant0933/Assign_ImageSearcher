@@ -3,7 +3,7 @@ import { SearchIcon } from '../constants/Icons';
 
 const SearchComponent = ({ searchQuery, onSearchQueryChange, performSearch}) => {
   return (
-    <div className='w-[480px] min-w-[300px] h-[56px] flex justify-between items-center gap-2 bg-slate-200 px-2 py-4 rounded-lg'>
+    <div id='searchBox' className='w-[40vw] h-[56px] flex justify-between items-center gap-2 bg-slate-200 px-2 py-4 rounded-lg'>
     <input
         type='text'
         value={searchQuery}

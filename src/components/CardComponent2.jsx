@@ -17,22 +17,23 @@ const CardComponent2 = ({ randomPhoto }) => {
 
   return (
    <>
-    <div className="flex flex-wrap justify-center items-center gap-4 btn">
+    <div id="card2wrapper" className="flex flex-wrap flex-row items-center justify-center gap-4 btn">
       {Array.isArray(randomPhoto) ? (
         randomPhoto &&
         randomPhoto.map((item,index) => (
           <div
             key={item.id || index} 
-            className="w-[380px] min-w-[350px] min-h-[300px] flex-1 relative
+            className="w-[400px] h-[300px] relative card2
+             flex flex-col justify-center items-center
              cursor-pointer rounded-lg hover:scale-105 transition-all duration-500"
              onClick={() => openModal(item)}
           >
             <img
               src={item.urls.regular}
-              className="w-full min-w-[300px] h-[300px] rounded-t-lg object-cover"
+              className="w-[90%] h-[80%] rounded-t-lg object-cover"
               alt={item.alt_description}
             />
-            <div className="absolute bottom-0 left-0 right-0 flex justify-between items-center py-2 px-4 mx-auto text-gray-900 bg-white">
+            <div className="flex absolute bottom-0 left-0 right-0 w-[360px] justify-between items-center py-2 px-4 mx-auto text-gray-900 bg-white">
               <div className="flex gap-2 items-center">
                 <div className="w-12 h-12 rounded-full bg-gray-300">
                   <img

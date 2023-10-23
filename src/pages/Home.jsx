@@ -47,17 +47,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="w-full min-h-screen px-8 block bg-gradient mx-auto">
+    <div className="relative parent">
       {/* Navbar component */}
       <Navbar />
-      <div className="w-[90%] pt-28 relative flex mx-auto flex-col justify-center items-center">
-        <div>
+      <div className="mt-32 relative flex flex-col items-center justify-center mx-auto content">
           <SearchComponent
             searchQuery={searchQuery}
             onSearchQueryChange={handleSearchQueryChange}
             performSearch={performSearch}
           />
-        </div>
         <div className="w-full flex justify-center items-center mt-20">
           {searchQuery ? (
             <CardComponent1 searchResults={searchResults} />
